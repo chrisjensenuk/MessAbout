@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  messabout.api:
+    image: ${DOCKER_REGISTRY-}messaboutapi
+    container_name: MessAbout.Api
+    build:
+      context: .
+      dockerfile: MessAbout.Api/Dockerfile
+
+  messabout-db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: MessAbout.Db
+    volumes:
+      - ./.containers/database:/var/opt/mssql/data
+    ports: 
+      - "1433:1433"
+    environment:
+        ACCEPT_EULA: "Y"
+        SA_PASSWORD: "Strong_password_123!"
