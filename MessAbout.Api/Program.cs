@@ -41,3 +41,5 @@ app.MapPost("/api/products", async (CreateProductRequest request, ISender sender
 app.UseHttpsRedirection();
 
 app.Run();
+
+public partial class Program { }

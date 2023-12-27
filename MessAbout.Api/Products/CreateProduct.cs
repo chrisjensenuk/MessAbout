@@ -1,6 +1,5 @@
 ﻿using MediatR;
 using MessAbout.Api.Infrastructure;
-using Microsoft.EntityFrameworkCore;
 
 namespace MessAbout.Api.Products
 {
@@ -35,5 +34,5 @@ namespace MessAbout.Api.Products
         }
     }
 
-    
+
 }
